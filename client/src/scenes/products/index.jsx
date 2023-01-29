@@ -136,7 +136,7 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <>What happened?</>
+        <>Loading?...</>
       )}
     </Box>
   );

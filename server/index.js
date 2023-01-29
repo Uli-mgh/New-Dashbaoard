@@ -23,9 +23,11 @@ import mongoose from "mongoose";
 //   dataProductStat,
 //   dataTransaction,
 //   dataOverallStat,
+//   dataAffiliateStat,
 // } from "./data/index.js";
-// import Transaction from "./models/Transaction.js";
 
+// import Transaction from "./models/Transaction.js";
+// import AffiliateStat from "./models/AffiliateStat.js";
 // Configurations
 
 dotenv.config();
@@ -43,7 +45,7 @@ app.use(cors());
 
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
-app.use("/managment", managmentRoutes);
+app.use("/management", managmentRoutes);
 app.use("/sales", salesRoutes);
 
 // Mongoose
@@ -64,5 +66,6 @@ mongoose
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // OverallStat.insertMany(dataOverallStat);
+    // AffiliateStat.insertMany(dataAffiliateStat);
   })
   .catch((error) => console.log(`${error} did not connect`));
